@@ -9,4 +9,9 @@ public class StartButtonBehaviour : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+
+    public void OnInstructionsButtonPressed()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
 }
