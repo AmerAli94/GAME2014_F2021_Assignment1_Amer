@@ -13,6 +13,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class BulletController : MonoBehaviour
 {
@@ -25,14 +26,19 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         rb.velocity = Vector2.up * speed;
+        
+    
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Enemy")
         {
+            ScoreManager.score += 10;
+            SoundManager.playExplodeSound();
             Destroy(gameObject);
             playExplosion();
+          
         }
     }
 
@@ -40,7 +46,7 @@ public class BulletController : MonoBehaviour
     {
         GameObject e = Instantiate(explosion) as GameObject;
         e.transform.position = transform.position;
-
+       
         Destroy(e, 0.50f);
     }
 }
