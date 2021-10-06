@@ -13,24 +13,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
-public class MovePlayer : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
+    public Rigidbody2D rb;
+    public int speed = 50;
 
-    private Rigidbody2D rb;
-    private float xDir;
-    private float moveSpeed = 4.0f;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.up * speed;
     }
 
-    private void FixedUpdate()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        xDir = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
-        rb.velocity = new Vector2(xDir, 0f);
+        if (col.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            playExplosion();
+        }
+    }
+
+    private void playExplosion()
+    {
+        GameObject e = Instantiate(explosion) as GameObject;
+        e.transform.position = transform.position;
+
+        Destroy(e, 0.50f);
     }
 }

@@ -7,19 +7,20 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// 
 //==================================
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-
-public class NextButtonBehaviour : MonoBehaviour
+public class EnemyCollider : MonoBehaviour
 {
-    public void OnNextButtonPressed()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        SceneManager.LoadScene("End");
+        if (col.tag == "Enemy")
+        {
+            Destroy(col.gameObject);
+        }
     }
 }

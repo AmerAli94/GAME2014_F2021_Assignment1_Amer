@@ -13,14 +13,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
-public class MovePlayer : MonoBehaviour
+public class EnemyMovementController : MonoBehaviour
 {
-
     private Rigidbody2D rb;
-    private float xDir;
-    private float moveSpeed = 4.0f;
+    public float speed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +25,17 @@ public class MovePlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        xDir = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
-        rb.velocity = new Vector2(xDir, 0f);
+        rb.velocity = new Vector2(0f, -speed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
 }
