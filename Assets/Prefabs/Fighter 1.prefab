@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1379832237935942722}
   - component: {fileID: 8012003287306181090}
-  - component: {fileID: 8471626988594380512}
   - component: {fileID: 7047643000731545258}
   - component: {fileID: 7327076900431364981}
-  - component: {fileID: -4405098080823087398}
+  - component: {fileID: 6431460861045764083}
   m_Layer: 0
   m_Name: Fighter 1
   m_TagString: Enemy
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2057161175316466541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.34, y: 4.32, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8471626988594380512
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057161175316466541}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.48}
-    newSize: {x: 0.31, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.24}
-  m_EdgeRadius: 0
 --- !u!50 &7047643000731545258
 Rigidbody2D:
   serializedVersion: 4
@@ -147,99 +120,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!82 &-4405098080823087398
-AudioSource:
+--- !u!60 &6431460861045764083
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057161175316466541}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d668d78a4318bb44bac05bc869e9312f, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.31, y: 0.48}
+    newSize: {x: 0.31, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.15121439, y: 0.071879864}
+      - {x: 0.07039189, y: 0.08395529}
+      - {x: 0.057541996, y: 0.15165949}
+      - {x: 0.12453982, y: 0.16109943}
+      - {x: 0.12278575, y: 0.20007154}
+      - {x: 0.044999998, y: 0.2222855}
+      - {x: 0.024235815, y: 0.21735048}
+      - {x: 0.023561835, y: 0.1609273}
+      - {x: -0.019683689, y: 0.16170883}
+      - {x: -0.030622642, y: 0.2300341}
+      - {x: -0.120571345, y: 0.18900034}
+      - {x: -0.11187275, y: 0.15733004}
+      - {x: -0.053087577, y: 0.15192604}
+      - {x: -0.084460884, y: 0.08848047}
+      - {x: -0.078718334, y: 0.0696516}
+      - {x: -0.14674625, y: 0.07008076}
+      - {x: -0.14835712, y: 0.02721326}
+      - {x: -0.05314231, y: -0.05992893}
+      - {x: -0.018428426, y: -0.22671388}
+      - {x: 0.0014332235, y: -0.22472286}
+      - {x: 0.020913482, y: -0.21182156}
+      - {x: 0.032785688, y: -0.18685697}
+      - {x: 0.036044896, y: -0.18180561}
+      - {x: 0.04253179, y: -0.13974571}
+      - {x: 0.031714212, y: -0.2012138}
+      - {x: 0.057571024, y: -0.055713743}
+      - {x: 0.14392862, y: 0.015141919}

@@ -7,7 +7,7 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// Instantiating bullets and update bullet count UI.
 //==================================
 
 using System.Collections;
@@ -20,8 +20,11 @@ public class ProjectileController : MonoBehaviour
     public GameObject BulletPrefab;
     public int bulletAmount = 100;
     public TextMeshProUGUI bulletValueTextholder;
-    
 
+    private void Start()
+    {
+        bulletAmount = 100;
+    }
     // Update is called once per frame
     void Update()
     {

@@ -7,7 +7,7 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// Button behaviours
 //==================================
 
 using System.Collections;
@@ -19,11 +19,17 @@ public class StartButtonBehaviour : MonoBehaviour
 {
     public void OnStartButtonPressed()
     {
+        HealthManager.health = 5;
         SceneManager.LoadScene("Main");
     }
 
     public void OnInstructionsButtonPressed()
     {
         SceneManager.LoadScene("Instructions");
+    }
+
+    public void OnMenuButtonPressed()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

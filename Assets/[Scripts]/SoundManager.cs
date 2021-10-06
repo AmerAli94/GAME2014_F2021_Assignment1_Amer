@@ -1,3 +1,14 @@
+// ===============================
+// PROGRAM NAME: GAME Programming (T163)
+// STUDENT ID : 101206769
+// AUTHOR     : AMER ALI MOHAMMED
+// CREATE DATE     : SEP 27, 2021
+// PURPOSE     : GAME2014_F2021_ASSIGNMENT1
+// SPECIAL NOTES:
+// ===============================
+// Change History:
+// Sound manager //clips only work if put in resources folder but not in any other.
+//==================================
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

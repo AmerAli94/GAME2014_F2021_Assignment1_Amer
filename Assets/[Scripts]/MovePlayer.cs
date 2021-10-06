@@ -7,7 +7,10 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// Added player movement
+//==================================
+// Change History:
+// Added explosion animations upon collision with enemies
 //==================================
 
 using System.Collections;
@@ -22,6 +25,8 @@ public class MovePlayer : MonoBehaviour
     private float xDir;
     private float moveSpeed = 4.0f;
 
+    public GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +37,21 @@ public class MovePlayer : MonoBehaviour
     {
         xDir = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
         rb.velocity = new Vector2(xDir, 0f);
+    }
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Enemy")
+        {
+            playExplosion();
+        }
+    }
+
+    private void playExplosion()
+    {
+        GameObject e = Instantiate(explosion) as GameObject;
+        e.transform.position = transform.position;
+
+        Destroy(e, 0.50f);
     }
 }

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8079834954512129013}
   - component: {fileID: 5413896130042595457}
-  - component: {fileID: 6408193641097902001}
-  - component: {fileID: 5069220419305352279}
   - component: {fileID: 2832263667961372843}
+  - component: {fileID: -3573404845462609823}
+  - component: {fileID: 1631303003155896651}
   m_Layer: 0
   m_Name: Alien 1
   m_TagString: Enemy
@@ -86,8 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6408193641097902001
-BoxCollider2D:
+--- !u!114 &2832263667961372843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6764595888382093935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1aca64ebc4217458a380008da4ff9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!60 &-3573404845462609823
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -109,10 +122,54 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.6}
-  m_EdgeRadius: 0
---- !u!50 &5069220419305352279
+  m_Points:
+    m_Paths:
+    - - {x: 0.089999996, y: -0.3212572}
+      - {x: 0.14320019, y: -0.2656789}
+      - {x: 0.17434716, y: -0.04}
+      - {x: 0.19349372, y: 0.12452412}
+      - {x: 0.12521958, y: 0.09349394}
+      - {x: 0.1671882, y: 0.14193344}
+      - {x: 0.20198897, y: 0.2041435}
+      - {x: 0.15533757, y: 0.23226786}
+      - {x: 0.14841309, y: 0.27772427}
+      - {x: 0.13806613, y: 0.30110484}
+      - {x: 0.097919375, y: 0.29662466}
+      - {x: 0.045578018, y: 0.2770377}
+      - {x: 0.026577324, y: 0.29523087}
+      - {x: 0.019696467, y: 0.34502754}
+      - {x: -0.01968962, y: 0.34358072}
+      - {x: -0.022704825, y: 0.29331595}
+      - {x: -0.07073516, y: 0.28457642}
+      - {x: -0.13557799, y: 0.3033672}
+      - {x: -0.15799135, y: 0.23673439}
+      - {x: -0.20085323, y: 0.1951828}
+      - {x: -0.17220527, y: 0.16570139}
+      - {x: -0.16965479, y: 0.13829708}
+      - {x: -0.13210756, y: 0.116746426}
+      - {x: -0.13092864, y: 0.11392546}
+      - {x: -0.12289977, y: 0.09471178}
+      - {x: -0.1915828, y: 0.12074852}
+      - {x: -0.16683525, y: -0.08}
+      - {x: -0.13722967, y: -0.27802113}
+      - {x: -0.089999996, y: -0.3234683}
+      - {x: -0.056409806, y: -0.33633956}
+      - {x: -0.044570893, y: -0.34637484}
+      - {x: -0.04996264, y: -0.2823634}
+      - {x: -0.04808539, y: -0.21657276}
+      - {x: 0.0016710162, y: -0.25859022}
+      - {x: 0.045621056, y: -0.22704557}
+      - {x: 0.049898803, y: -0.3411561}
+    - - {x: -0.047320474, y: -0.18728559}
+      - {x: -0.046906292, y: 0.009779664}
+      - {x: -0.009005526, y: -0.018176362}
+      - {x: 0.009005526, y: -0.019171044}
+      - {x: 0.04591182, y: 0.013757439}
+      - {x: 0.05278455, y: -0.17999999}
+      - {x: -0.00091069937, y: -0.22640961}
+      - {x: -0.0011293888, y: -0.22424173}
+      - {x: -0.01730299, y: -0.20639223}
+--- !u!50 &1631303003155896651
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -133,16 +190,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2832263667961372843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6764595888382093935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea1aca64ebc4217458a380008da4ff9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1

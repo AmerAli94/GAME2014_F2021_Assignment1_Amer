@@ -7,8 +7,13 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// Added Bullet Movement
 //==================================
+//==================================
+// Change History:
+// Added Explosions to bullet reactions
+//==================================
+
 
 using System.Collections;
 using System.Collections.Generic;

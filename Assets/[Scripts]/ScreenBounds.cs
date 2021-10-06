@@ -7,7 +7,7 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// Player screen bounds so the player is not going off the screen
 //==================================
 
 using System.Collections;

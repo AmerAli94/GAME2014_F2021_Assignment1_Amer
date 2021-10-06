@@ -9,6 +9,9 @@
 // Change History:
 // Added Enemy Spawns and File Headers for the project
 //==================================
+// Change History:
+// Randomised the enemy spawn and fixed some bugs
+//==================================
 
 using System.Collections;
 using System.Collections.Generic;
@@ -45,7 +48,7 @@ public class EnemySpawn : MonoBehaviour
         if(Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randPosition = Random.Range(-2.4f, 2.4f);
+            randPosition = Random.Range(-2.0f, 2.0f);
             spawnPosition = new Vector2(randPosition, transform.position.y);
             Instantiate(RandomEnemy(), spawnPosition, Quaternion.identity, this.transform);
         }

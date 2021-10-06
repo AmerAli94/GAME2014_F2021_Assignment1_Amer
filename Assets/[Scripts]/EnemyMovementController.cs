@@ -7,7 +7,10 @@
 // SPECIAL NOTES:
 // ===============================
 // Change History:
-// Added Enemy Spawns and File Headers for the project
+// Added Enemy Movement speed and bullet collision triggers
+//==================================
+// Change History:
+// Added sound and updated player damage
 //==================================
 
 using System.Collections;
@@ -17,9 +20,8 @@ using UnityEngine;
 public class EnemyMovementController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed = 1;
+    public float speed = 0.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,6 +37,14 @@ public class EnemyMovementController : MonoBehaviour
     {
         if(col.tag == "Bullet")
         {
+            
+            Destroy(gameObject);
+        }
+
+        if (col.tag == "Player")
+        {
+            SoundManager.playExplodeSound();
+            HealthManager.health -= 1;
             Destroy(gameObject);
         }
     }
