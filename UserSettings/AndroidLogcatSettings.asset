@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "ca.georgebrowncollege.game2014_f2021_assignment1_amer",
-        "processId": 3416,
+        "processId": 4482,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,18 @@
             "deviceId": "emulator-5554",
             "name": "ca.georgebrowncollege.game2014_f2021_assignment1_amer",
             "processId": 3416,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.georgebrowncollege.game2014_f2021_assignment1_amer",
+            "processId": 3933,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.georgebrowncollege.game2014_f2021_assignment1_amer",
+            "processId": 4482,
             "exited": false
         }
     ],
